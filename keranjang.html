@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Cart Detail - ToyChest</title>
+    <style>
+        /* Gaya tambahan untuk halaman keranjang */
+        body {
+            background-color: #e0f7fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-page {
+            padding: 60px 0;
+        }
+
+        .cart-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item img {
+            width: 100px;
+            border-radius: 8px;
+        }
+
+        .cart-item-details {
+            flex: 2;
+            margin-left: 20px;
+        }
+
+        .cart-item-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .cart-item-quantity {
+            width: 70px;
+            text-align: center;
+            margin-right: 15px;
+        }
+
+        .cart-summary {
+            padding-top: 20px;
+            border-top: 2px solid #007BFF;
+        }
+
+        .cart-summary h5 {
+            font-weight: bold;
+        }
+
+        .cart-summary .btn {
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 8px;
+        }
+
+        .btn-update, .btn-remove {
+            background-color: transparent;
+            color: #007BFF;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-update:hover, .btn-remove:hover {
+            color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .cart-item {
+                flex-wrap: wrap;
+            }
+
+            .cart-item-details {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">ToyChest</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Cart Page Content -->
+    <div class="container cart-page">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="cart-container">
+                    <h3 class="mb-4">Your Shopping Cart</h3>
+
+                    <!-- Cart Item -->
+                    <div class="cart-item">
+                        <img src="path/to/toy-image.jpg" alt="Toy Image">
+                        <div class="cart-item-details">
+                            <h5>Toy Name</h5>
+                            <p class="text-muted">$20.00</p>
+                        </div>
+                        <div class="cart-item-actions">
+                            <input type="number" class="form-control cart-item-quantity" value="1" min="1">
+                            <span class="font-weight-bold">$20.00</span>
+                            <button class="btn-update ml-2"><i class="fas fa-sync"></i></button>
+                            <button class="btn-remove"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    <!-- End of Cart Item -->
+
+                    <!-- Ulangi Cart Item jika diperlukan -->
+
+                    <!-- Cart Summary -->
+                    <div class="cart-summary mt-4">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h5>Subtotal</h5>
+                            <h5>$20.00</h5>
+                        </div>
+                        <button class="btn btn-primary btn-block mt-3">Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
